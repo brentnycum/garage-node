@@ -25,7 +25,7 @@ After checking out this code from Github, just run `npm install` from the app di
  * [Express](http://expressjs.com/)
  * Jade - For the one view template.
  * [async.js](https://github.com/caolan/async)
- * [pi-gpio](https://github.com/rakeshpai/pi-gpio)
+ * [pi-gpio](https://github.com/brentnycum/pi-gpio) My fork. [Original Repo](https://github.com/rakeshpai/pi-gpio)
 
 I used `pi-gpio` over [rpi-gpio](https://github.com/JamesBarwell/rpi-gpio.js) because I liked the fact pi-gpio made use of [GPIO Admin](https://github.com/quick2wire/quick2wire-gpio-admin), allowing you to be able to control the gpio pins without being the root user. Couldn't get `rpi-gpio` to use that.
 

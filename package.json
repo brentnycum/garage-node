@@ -9,6 +9,6 @@
     "express": "3.1.0",
     "jade": "*",
     "async": "0.2.6",
-    "pi-gpio": "0.0.2"
+    "pi-gpio": "git://github.com/brentnycum/pi-gpio.git"
   }
 }

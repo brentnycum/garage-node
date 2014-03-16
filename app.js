@@ -25,6 +25,10 @@ function delayPinWrite(pin, value, callback) {
 	}, config.RELAY_TIMEOUT);
 }
 
+app.get("/api/ping", function(req, res) {
+	res.json("pong");
+});
+
 app.post("/api/garage/left", function(req, res) {
 	async.series([
 		function(callback) {

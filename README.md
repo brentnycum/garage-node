@@ -4,7 +4,7 @@ This is the node.js app that is controlling my garage door openers via Raspberry
 
 ## Requirements
 
-Install [node.js](http://nodejs.org/) and npm onto your Raspberry Pi. 
+Install [node.js](http://nodejs.org/) and npm onto your Raspberry Pi.
 
 ``` shell
 [sudo] apt-get install nodejs npm
@@ -23,7 +23,6 @@ After checking out this code from Github, just run `npm install` from the app di
 ## Dependencies Used
 
  * [Express](http://expressjs.com/)
- * Jade - For the one view template.
  * [async.js](https://github.com/caolan/async)
  * [pi-gpio](https://github.com/brentnycum/pi-gpio) My fork. [Original Repo](https://github.com/rakeshpai/pi-gpio)
 
@@ -48,14 +47,13 @@ The Raspberry Pi defaults the GPIO pin to low, but the pin is default set to inp
 ## Todo
 
  * Error handling, currently there really is none.
- * Apple Touch Icon so I can add it to my homescreen.
  * Logging.
 
 ## Parts
 
  * Raspberry Pi running Raspbian "wheezy"
- * Edimax EW-7811Un (WiFi dongle, b/g/n)
- * SainSmart 2-Channel Relay
+ * [Edimax EW-7811Un](http://www.amazon.com/dp/B003MTTJOY?tag=itsbr-20) (WiFi dongle, b/g/n)
+ * [SainSmart 2-Channel Relay](http://www.amazon.com/dp/B0057OC6D8?tag=itsbr-20)
 
 ## Links
 

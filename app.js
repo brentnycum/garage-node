@@ -1,23 +1,17 @@
 var express = require('express'),
-	routes = require('./routes'),
 	path = require('path'),
 	config = require('./config'),
 	async = require('async'),
 	gpio = require('pi-gpio'),
 	app = express();
 
-app.configure(function(){
-	app.set('port', process.env.PORT || 3000);
-	app.set('views', __dirname + '/views');
-	app.set('view engine', 'jade');
-	app.use(express.favicon());
-	app.use(express.bodyParser());
-	app.use(express.methodOverride());
-	app.use(app.router);
-	app.use(express.static(path.join(__dirname, 'public')));
-});
+app.set('port', process.env.PORT || 3000);
+app.use(express.favicon());
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
 
-app.get('/', routes.index);
+app.use('/', express.static(__dirname + '/public'));
 
 function delayPinWrite(pin, value, callback) {
 	setTimeout(function() {

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nycum's Garage</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<style>
+	html, body, div, button {
+		margin: 0;
+		padding: 0;
+		font-family: "Helvetica Neue";
+	}
+
+	body {
+		background-color: #EAEAEA;
+	}
+
+	button {
+		background-color: #FFFFFF;
+		border: 1px solid #C9C9C9;
+		border-right: 0px solid #000;
+		border-left: 0px solid #000;
+		font-size: 1.5em;
+		margin-top: 20px;
+		width: 100%;
+		height: 44px;
+	}
+	</style>
+</head>
+<body>
+	<button onclick="openLeft()">Left Garage</button>
+	<button onclick="openRight()">Right Garage</button>
+	<button onclick="openBoth()">Both Garages</button>
+
+	<script>
+
+	function post(url) {
+		var request = new XMLHttpRequest();
+		request.open('POST', url, true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.send({});
+	}
+
+	function openLeft() { post("/api/garage/left"); }
+
+	function openRight() { post("/api/garage/right"); }
+
+	function openBoth() { post("/api/garage/both"); }
+
+	</script>
+
+</body>
+</html>
